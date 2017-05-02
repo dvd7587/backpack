@@ -24,7 +24,7 @@ class BufferArchive : public Archive
 {
 public:
     BufferArchive();
-    BufferArchive(uint8_t *data, const size_t& size);
+    BufferArchive(const uint8_t *data, const size_t& size);
     ~BufferArchive();
 
     uint8_t* get_data() const;

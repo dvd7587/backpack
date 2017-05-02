@@ -9,6 +9,7 @@ class Foo : public Archivable
 {
 public:
     Foo();
+    virtual ~Foo();
 
     int64_t get_value() const;
     void set_value(const int64_t &value);

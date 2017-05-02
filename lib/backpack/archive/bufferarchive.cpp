@@ -18,15 +18,20 @@
  */
 #include "bufferarchive.h"
 #include <stdlib.h>
+#include <cstring>
 
 BufferArchive::BufferArchive()
 {
     init_state();
 }
 
-BufferArchive::BufferArchive(uint8_t *data, const size_t& size)
-    :m_data(data), m_data_size(size)
+BufferArchive::BufferArchive(const uint8_t *data, const size_t& size)
+    :m_data(nullptr), m_data_size(size)
 {
+    // Copy the input data
+    m_data = (uint8_t*)malloc(m_data_size);
+    memcpy(m_data, data, m_data_size);
+
     m_data_capacity = 0;
     m_data_pos = 0;
 }
@@ -363,7 +368,10 @@ void BufferArchive::init_state()
 
 void BufferArchive::free_data_no_init()
 {
-    if (m_data) free(m_data);
+    if (m_data)
+        free(m_data);
+
+    m_data = nullptr;
 }
 
 void BufferArchive::free_data()

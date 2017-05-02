@@ -12,7 +12,7 @@ class Baz : public Archivable
 {
 public:
     Baz();
-    ~Baz();
+    virtual ~Baz();
 
     void write_to_archive(Archive& archive) const override;
     void read_from_archive(const Archive& archive) override;

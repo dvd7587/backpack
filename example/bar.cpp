@@ -6,6 +6,11 @@ Bar::Bar() :
 
 }
 
+Bar::~Bar()
+{
+
+}
+
 const Foo& Bar::get_foo() const
 {
     return foo;
