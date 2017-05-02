@@ -18,6 +18,7 @@
  */
 #include "bufferarchive.h"
 #include <stdlib.h>
+#include <cstring>
 
 BufferArchive::BufferArchive()
 {
