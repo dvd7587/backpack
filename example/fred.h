@@ -8,6 +8,7 @@ class Fred : public Serializable
 {
 public:
     Fred();
+    virtual ~Fred();
 
     // Serializable interface
     void serialize(std::string &out_string) const override;

@@ -6,6 +6,11 @@ Fred::Fred()
 
 }
 
+Fred::~Fred()
+{
+
+}
+
 void Fred::serialize(std::string &out_string) const
 {
     std::ostringstream oss;

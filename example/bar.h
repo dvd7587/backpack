@@ -9,6 +9,7 @@ class Bar : public Archivable
 {
 public:
     Bar();
+    virtual ~Bar();
 
     void write_to_archive(Archive& archive) const override;
     void read_from_archive(const Archive& archive) override;

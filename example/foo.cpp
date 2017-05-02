@@ -6,6 +6,11 @@ Foo::Foo() :
 
 }
 
+Foo::~Foo()
+{
+
+}
+
 int64_t Foo::get_value() const
 {
     return value;
